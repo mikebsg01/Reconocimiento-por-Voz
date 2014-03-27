@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Test Annyang</title>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/annyang/1.1.0/annyang.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>
+$(document).on('ready', function(){
+alert("Inicia annyang.");
+
+if (annyang) {
+  alert("Success...");
+  // Let's define our first command. First the text we expect, and then the function it should call
+  var commands = {
+    'Hi': function() {
+      alert("Hello!! :D");
+    }
+  };
+
+  // Add our commands to annyang
+  annyang.addCommands(commands);
+
+  // Start listening. You can call this here, or attach this call to an event, button, etc.
+  annyang.start();
+}else{
+	alert("No found annyang.");
+}
+
+
+alert("Finalizo annyang.");
+});
+</script>
+</head>
+<body>
+	<h1> Hola Mundo Annyang </h1>
+</body>
+</html>
